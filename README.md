@@ -34,23 +34,14 @@ This script detects complex sentences in a text file using SpaCy and readability
 
 
 ```python
-from complex_sentence_detector.detector import ComplexSentenceDetector
-from complex_sentence_detector.utils import format_results
+from pyCSD import ComplexSentenceDetector
+from pyCSD import format_results
 
 detector = ComplexSentenceDetector()
 text = "Your input text here..."
 results = detector.analyze_text(text)
 print(format_results(results))
 ```
-
-Command-line usage:
-analyze-text "Your input text here..."
-
-To install and use:
-Install package: pip install -e .
-Download spaCy model: python -m spacy download en_core_web_sm
-
-
 
 Conjunctions: Coordinating (and, but) or subordinating (although, because)
 Multiple Clauses: Presence of multiple main verbs
